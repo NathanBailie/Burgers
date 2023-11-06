@@ -1,7 +1,7 @@
 @import './reset';
-@import './variables/global';
+@import '../variables/global';
+@import '../fonts/fonts';
 
-/* stylelint-disable */
 .app {
-    
+    font-family: Gilroy, sans-serif;  
 }
