@@ -2,6 +2,15 @@
 @import '../variables/global';
 @import '../fonts/fonts';
 
+* {
+    background-color: #191411;
+}
+
 .app {
-    font-family: Gilroy, sans-serif;  
+    font-family: Gilroy, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }

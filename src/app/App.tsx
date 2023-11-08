@@ -1,7 +1,9 @@
-const App = (): any => {
+import { Header } from 'features/Header';
+
+const App = () => {
     return (
         <div className="app">
-            <h1>Hello, World!</h1>
+            <Header />
         </div>
     )
 }

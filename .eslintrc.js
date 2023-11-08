@@ -63,6 +63,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
+        'prefer-const': 'off'
 
     },
     "globals": {
