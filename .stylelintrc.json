@@ -15,6 +15,7 @@
         "at-rule-empty-line-before": "never",
         "no-empty-first-line": true,
         "block-opening-brace-space-before": "always",
-        "rule-empty-line-before": "always"
+        "rule-empty-line-before": "always",
+        "no-descending-specificity": null
     }
 }

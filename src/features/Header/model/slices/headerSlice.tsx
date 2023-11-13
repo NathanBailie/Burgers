@@ -8,7 +8,8 @@ export interface HeaderState {
 const initialState: HeaderSchema = {
     currency: '$',
     coefficient: 1,
-    currencyId: 0
+    currencyId: 0,
+    hamburgerCondition: false
 };
 
 const changeCurr = (state: HeaderSchema) => {
@@ -51,6 +52,12 @@ export const headerSlice = createSlice({
             state.currency = newCurrency;
             state.coefficient = newCoefficient;
             state.currencyId = newCurrencyId;
+        },
+        activateHamburger: (state) => {
+            state.hamburgerCondition = true;
+        },
+        deactivateHamburger: (state) => {
+            state.hamburgerCondition = false;
         }
     }
 });
