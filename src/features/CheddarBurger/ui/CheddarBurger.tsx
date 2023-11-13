@@ -5,7 +5,7 @@ import cls from './CheddarBurger.module.scss';
 
 export const CheddarBurger = memo(() => {
     return (
-        <div className={classNames(cls.CheddarBurger, {}, ['container'])}>
+        <section className={classNames(cls.CheddarBurger, {}, ['container'])}>
             <div className={cls.CheddarBurger__container}>
                 <div className={cls.CheddarBurger__newMenu}>
                     Новое меню
@@ -25,7 +25,7 @@ export const CheddarBurger = memo(() => {
             <div className={cls.CheddarBurger__image}>
                 <img src={ChadderBurger} alt="ChadderBurger" />
             </div>
-        </div>
+        </section>
     );
 });
 

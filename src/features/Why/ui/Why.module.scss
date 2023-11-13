@@ -1,0 +1,70 @@
+.Why {
+    padding: 0 10px 180px;
+
+    // background: url('shared/assets/images/backgrounds/whybg.png') center center / cover no-repeat;
+    // background: url('../../../shared/assets/images/backgrounds/whybg.png') center center / cover no-repeat;
+    
+    &__title {
+        font: var(--font-xxl);
+        letter-spacing: 1.92px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        text-align: center;
+    }
+    
+    &__container {
+        display: grid;
+        gap: 100px;
+        grid-template-columns: repeat(auto-fill, 312px);
+        justify-content: center;
+        margin-top: 60px;
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__image {
+        width: 100px;
+        height: 100px;
+        
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__subtitle,
+    &__text {
+        margin-top: 24px;
+        color: var(--text-color); 
+        text-align: center;
+    }
+    
+    &__subtitle {
+        font: var(--font-xl);
+    }
+    
+    &__text {
+        font: var(--font-m);
+    }
+}
+@media(width<= 500px) {
+
+    .Why {
+
+        &__title {
+            font: var(--font-xl);
+        } 
+        
+        &__container {
+            gap: 50px;
+        }
+        
+        &__subtitle,
+        &__text {
+            margin-top: 15px;
+        }
+    }
+}
