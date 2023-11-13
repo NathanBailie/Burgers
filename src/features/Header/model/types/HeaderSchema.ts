@@ -1,6 +1,7 @@
 export interface HeaderSchema {
-    currency: number | string
-    coefficient: number | string
-    currencyId: number | string
+    currency: string
+    coefficient: number
+    currencyId: number
+    currencyPlaceholder: string
     hamburgerCondition: boolean
 }

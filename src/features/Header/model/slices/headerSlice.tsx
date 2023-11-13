@@ -1,46 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { HeaderSchema } from '../types/HeaderSchema';
 
-export interface HeaderState {
-    value: number
+const currencies = [
+    createCurrency('$', 1, 'Dolar'),
+    createCurrency('₽', 95, 'Ruble'),
+    createCurrency('BYN', 3.3, 'Belarusian ruble'),
+    createCurrency('€', 0.94, 'Euro'),
+    createCurrency('₺', 28, 'Turkish lira'),
+    createCurrency('¥', 7.3, 'Chinese yuan')
+];
+
+function createCurrency(
+    sign: string,
+    coefficient: number,
+    placeholder: string
+) {
+    return { sign, coefficient, placeholder };
 }
 
 const initialState: HeaderSchema = {
     currency: '$',
     coefficient: 1,
     currencyId: 0,
+    currencyPlaceholder: 'Dollar',
     hamburgerCondition: false
-};
-
-const changeCurr = (state: HeaderSchema) => {
-    const { currency, coefficient, currencyId } = state;
-    let newCurrency: string;
-    let newCoefficient: number;
-    let newCurrencyId: number;
-
-    const currencies = [
-        createCurrency('$', 1),
-        createCurrency('₽', 95),
-        createCurrency('BYN', 3.3),
-        createCurrency('€', 0.94),
-        createCurrency('₺', 28),
-        createCurrency('¥', 7.3)
-    ];
-
-    function createCurrency(sign: string, coefficient: number) {
-        return { sign, coeff: coefficient };
-    }
-
-    if (currencyId === currencies.length - 1) {
-        newCurrencyId = 0;
-    } else {
-        newCurrencyId = Number(currencyId) + 1;
-    }
-
-    newCurrency = currencies[newCurrencyId].sign;
-    newCoefficient = currencies[newCurrencyId].coeff;
-
-    return [newCurrency, newCoefficient, newCurrencyId];
 };
 
 export const headerSlice = createSlice({
@@ -48,13 +31,20 @@ export const headerSlice = createSlice({
     initialState,
     reducers: {
         changeCurrency: (state) => {
-            const [newCurrency, newCoefficient, newCurrencyId] = changeCurr(state);
-            state.currency = newCurrency;
-            state.coefficient = newCoefficient;
-            state.currencyId = newCurrencyId;
+            const { currencyId } = state;
+
+            if (currencyId === currencies.length - 1) {
+                state.currencyId = 0;
+            } else {
+                state.currencyId = Number(currencyId) + 1;
+            }
+
+            state.currency = currencies[state.currencyId].sign;
+            state.coefficient = currencies[state.currencyId].coefficient;
+            state.currencyPlaceholder = currencies[state.currencyId].placeholder;
         },
-        activateHamburger: (state) => {
-            state.hamburgerCondition = true;
+        toggleHamburger: (state) => {
+            state.hamburgerCondition = !state.hamburgerCondition;
         },
         deactivateHamburger: (state) => {
             state.hamburgerCondition = false;
