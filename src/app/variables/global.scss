@@ -1,4 +1,28 @@
 /* stylelint-disable */
+
 :root {
     --text-color: white;
+    
+    --font-family-gilroy: Gilroy, sans-serif;
+    --font-family-merriweather: Merriweather, sans-serif;
+    
+    --font-size-m: 16px;
+    --line-height-m: 24px;
+    --font-m: var(--font-size-m) / var(--line-height-m) var(--font-family-gilroy);
+
+    --font-size-l: 18px;
+    --line-height-l: 26px;
+    --font-l: var(--font-size-l) / var(--line-height-l) var(--font-family-gilroy);
+
+    --font-size-xl: 24px;
+    --line-height-xl: 32px;
+    --font-xl: var(--font-size-xl) / var(--line-height-xl) var(--font-family-gilroy);
+
+    --font-size-xxl: 64px;
+    --line-height-xxl: 72px;
+    --font-xxl: var(--font-size-xxl) / var(--line-height-xxl) var(--font-family-merriweather);
+
+    --font-size-huge: 120px;
+    --line-height-huge: 156px;
+    --font-huge: var(--font-size-huge) / var(--line-height-huge) var(--font-family-merriweather);
 }

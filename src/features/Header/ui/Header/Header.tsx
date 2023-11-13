@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import type { Mods } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import logo from 'shared/assets/images/menu/logo.png';
+import logo from 'shared/assets/images/logo.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { headerActions } from '../../model/slices/headerSlice';
 import { getHamburgerCondition } from '../../model/selectors/getHeaderSelectors';

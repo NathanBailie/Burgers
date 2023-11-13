@@ -1,7 +1,9 @@
 .Header {
     position: relative;
-    padding: 40px 0;
+    padding: 40px 10px;
     height: 130px;
+    background-color: #191411;
+    z-index: 100;
     
     &__container {
         display: flex;
@@ -34,14 +36,18 @@
     &__item {
 
         a {
-            font-size: 18px;
+            font: var(--font-l);
             cursor: pointer;
             text-decoration: none;
             color: var(--text-color);
 
             &:hover {
                 border-bottom: 1px solid white;
-                color: #fdfff5;
+                color: #dfd697
+            }
+            
+            &:active {
+                color: #ffc671; 
             }
         }
     }
@@ -69,7 +75,7 @@
             height: 100vh;
             transition: all 0.7s;
             left: -75%;
-            background: rgb(0 0 0 / 60%);
+            background: rgb(0 0 0 / 90%);
 
             &_active {
                 left: 0;
@@ -82,7 +88,6 @@
             &__list {
                 flex-direction: column;
                 gap: 50px;
-                background: rgb(0 0 0 / 60%);
             }
             
             &__item {
@@ -91,17 +96,15 @@
                 align-items: center;
                 width: 100%;
                 height: 60px;
-                font-size: 22px;
                 
                 a {
-                    font-size: 22px;
+                    font: var(--font-xl);
                     width: 100%;
                     height: 100%;
                     text-align: center;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: rgb(0 0 0 / 60%);
 
                     &:hover {
                         border-bottom: none;
