@@ -13,16 +13,16 @@ const currencies = [
 function createCurrency(
     sign: string,
     coefficient: number,
-    placeholder: string
+    title: string
 ) {
-    return { sign, coefficient, placeholder };
+    return { sign, coefficient, title };
 }
 
 const initialState: HeaderSchema = {
     currency: '$',
     coefficient: 1,
     currencyId: 0,
-    currencyPlaceholder: 'Dollar',
+    currencyTitle: 'Dollar',
     hamburgerCondition: false
 };
 
@@ -41,7 +41,7 @@ export const headerSlice = createSlice({
 
             state.currency = currencies[state.currencyId].sign;
             state.coefficient = currencies[state.currencyId].coefficient;
-            state.currencyPlaceholder = currencies[state.currencyId].placeholder;
+            state.currencyTitle = currencies[state.currencyId].title;
         },
         toggleHamburger: (state) => {
             state.hamburgerCondition = !state.hamburgerCondition;
