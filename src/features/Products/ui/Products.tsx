@@ -5,15 +5,15 @@ import cls from './Products.module.scss';
 import { getData, getError, getStatus } from '../model/selectors/productsSelectors';
 import { fetchBurgers } from '../model/services/fetchBurgers';
 import { type AppDispatch } from 'app/providers/StoreProvider/config/store';
-import { getCurrency } from 'features/Header/model/selectors/getHeaderSelectors';
+import { getCurrency, getCurrencyCoefficient } from 'features/Header/model/selectors/getHeaderSelectors';
 
 export const Products = memo(() => {
     const dispatch = useDispatch<AppDispatch>();
     const products = useSelector(getData);
     const status = useSelector(getStatus);
     const error = useSelector(getError);
-    const currency = useSelector(getCurrency)
-    console.log(products);
+    const currency = useSelector(getCurrency);
+    const coefficient = useSelector(getCurrencyCoefficient);
 
     useEffect(() => {
         dispatch(fetchBurgers());
@@ -40,7 +40,7 @@ export const Products = memo(() => {
                             <div className={cls.Products__info}>
                                 <div className={cls.Products__numbers}>
                                     <span className={cls.Products__price}>
-                                        {`${item.price} ${currency}`}
+                                        {`${(item.basePrice * coefficient).toFixed(1)} ${currency}`}
                                     </span>
                                     <span className={cls.Products__weight}>
                                         {`${item.grams} гр`}
