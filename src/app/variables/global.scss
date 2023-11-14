@@ -18,11 +18,15 @@
     --line-height-xl: 32px;
     --font-xl: var(--font-size-xl) / var(--line-height-xl) var(--font-family-gilroy);
 
-    --font-size-xxl: 64px;
-    --line-height-xxl: 72px;
-    --font-xxl: var(--font-size-xxl) / var(--line-height-xxl) var(--font-family-merriweather);
+    --font-size-xxl: 32px;
+    --line-height-xxl: 40px;
+    --font-xxl: var(--font-size-xxl) / var(--line-height-xxl) var(--font-family-gilroy);
 
-    --font-size-huge: 120px;
-    --line-height-huge: 156px;
-    --font-huge: var(--font-size-huge) / var(--line-height-huge) var(--font-family-merriweather);
+    --font-size-title: 64px;
+    --line-height-title: 72px;
+    --font-title: var(--font-size-title) / var(--line-height-title) var(--font-family-merriweather);
+
+    --font-size-main-title: 120px;
+    --line-height-main-title: 156px;
+    --font-main-title: var(--font-size-main-title) / var(--line-height-main-title) var(--font-family-merriweather);
 }

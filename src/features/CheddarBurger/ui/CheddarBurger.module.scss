@@ -25,7 +25,7 @@
     
     &__title {
         text-transform: uppercase;
-        font: var(--font-huge);
+        font: var(--font-main-title);
     }
     
     &__text {
@@ -53,7 +53,7 @@
     .CheddarBurger {
 
         &__title {
-            font: var(--font-xxl);
+            font: var(--font-title);
         }  
         
         &__text {

@@ -72,8 +72,6 @@ module.exports = {
     },
     "ignorePatterns": [
         '.eslintrc.js',
-        // 'config/**/*',
-        // 'webpack.config.ts'
     ],
 
 }
