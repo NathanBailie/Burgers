@@ -1,0 +1,14 @@
+.Products {
+    padding: 0 0 180px;
+
+    // background: url('../../../../public/products.png') top center / contain no-repeat;
+
+    &__title {
+        font: var(--font-xxl);
+        color: var(--text-color);
+        letter-spacing: 1.92px;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 100;
+    }
+}

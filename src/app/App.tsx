@@ -1,6 +1,7 @@
-import { CheddarBurger } from 'features/CheddarBurger';
 import { Header } from 'features/Header';
+import { CheddarBurger } from 'features/CheddarBurger';
 import { Why } from 'features/Why';
+import { Products } from 'features/Products';
 
 const App = () => {
     return (
@@ -8,6 +9,7 @@ const App = () => {
             <Header />
             <CheddarBurger />
             <Why />
+            <Products />
         </div>
     )
 }

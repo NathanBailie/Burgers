@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Provider } from 'react-redux'
-import { legacy_createStore as createStore } from 'redux';
 import { store } from '../config/store';
 
 interface StoreProviderProps {
