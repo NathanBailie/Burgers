@@ -6,6 +6,7 @@ import { getData, getError, getStatus } from '../model/selectors/productsSelecto
 import { fetchBurgers } from '../model/services/fetchBurgers';
 import { type AppDispatch } from 'app/providers/StoreProvider/config/store';
 import { getCurrency, getCurrencyCoefficient } from 'features/Header/model/selectors/getHeaderSelectors';
+import { Button, ButtonImage, ButtonTheme } from 'shared/ui/Button/Button';
 
 export const Products = memo(() => {
     const dispatch = useDispatch<AppDispatch>();
@@ -46,9 +47,13 @@ export const Products = memo(() => {
                                         {`${item.grams} гр`}
                                     </span>
                                 </div>
-                                <button className={cls.Products__order}>
-                                    Заказать
-                                </button>
+                                <Button
+                                    theme={ButtonTheme.YELLOW}
+                                    width='182'
+                                    height='62'
+                                    text='Заказать'
+                                    imageName={ButtonImage.SHOPPING_CARD}
+                                />
                             </div>
                         </div>
                     )

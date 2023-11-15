@@ -1,8 +1,6 @@
 .Products {
     padding: 0 0 180px;
 
-    // background: url('../../../../public/products.png') top center / contain no-repeat;
-
     &__title {
         font: var(--font-title);
         color: var(--text-color);
@@ -75,16 +73,5 @@
         color: #757575;
         font: var(--font-m);
         margin-top: 8px;
-    }
-    
-    &__order {
-        width: 182px;
-        height: 62px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(96deg, #DA8023 0%, #E2B438 100%);
-        border-radius: 8px;
-        cursor: pointer;
     }
 }

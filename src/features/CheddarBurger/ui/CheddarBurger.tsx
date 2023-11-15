@@ -1,15 +1,14 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import ChadderBurger from 'shared/assets/images/cheddarBurger.png';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './CheddarBurger.module.scss';
 
 export const CheddarBurger = memo(() => {
     return (
         <section className={classNames(cls.CheddarBurger, {}, ['container'])}>
             <div className={cls.CheddarBurger__container}>
-                <div className={cls.CheddarBurger__newMenu}>
-                    Новое меню
-                </div>
+                <Button theme={ButtonTheme.RED} width='137' height='46' text='Новое меню' />
                 <h1 className={cls.CheddarBurger__title}>
                     бургер чеддер
                 </h1>
@@ -18,9 +17,7 @@ export const CheddarBurger = memo(() => {
                     и насладиться отличным вкусом наших бургеров. Готовим для
                     вас лучшие бургеры в городе из отборной мраморной говядины.
                 </p>
-                <button className={cls.CheddarBurger__button}>
-                    Смотреть меню
-                </button>
+                <Button theme={ButtonTheme.YELLOW} width='260' height='62' text='Смотреть меню' />
             </div>
             <div className={cls.CheddarBurger__image}>
                 <img src={ChadderBurger} alt="ChadderBurger" />

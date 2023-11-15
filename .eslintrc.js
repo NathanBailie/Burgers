@@ -64,7 +64,8 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'prefer-const': 'off',
-        "@typescript-eslint/no-floating-promises": "warn"
+        "@typescript-eslint/no-floating-promises": "warn",
+        "@typescript-eslint/consistent-type-imports": "warn"
 
     },
     "globals": {
