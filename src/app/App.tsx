@@ -2,6 +2,7 @@ import { Header } from 'features/Header';
 import { CheddarBurger } from 'features/CheddarBurger';
 import { Why } from 'features/Why';
 import { Products } from 'features/Products';
+import { Order } from 'features/Order';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             </div>
             <Why />
             <Products />
+            <Order />
         </div>
     )
 }

@@ -1,0 +1,62 @@
+.Order {
+    padding: 0 0 180px;
+    background: url('../../../shared/assets/images/backgrounds/order.png') center center/cover no-repeat;
+    
+    &__container {
+        position: relative;
+        background: none;
+        z-index: 1;
+    }
+    
+    &__title {
+        font: var(--font-title);
+        color: var(--text-color);
+        letter-spacing: 1.92px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    &__image {
+        position: absolute;
+        top: 0;
+        right: calc(100% - 764px);
+        z-index: -1;
+    }
+    
+    &__form {
+        max-width: 424px;
+        max-height: 555px;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #211A16;
+        border-radius: 16px;
+        border: 1px solid #353535;
+        margin: 60px 0 0 auto;
+        z-index: 99;
+    }
+    
+    &__description {
+        font: var(--font-xl);
+        color: var(--text-color);
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    &__input {
+        width: 100%;
+        padding: 20px 10px;
+        margin-bottom: 20px;
+        background: none;
+        border-radius: 8px;
+        border: 1px solid #DA8023;
+        
+        &::placeholder {
+            font: var(--font-m);
+            color: #757575;
+        }
+    }
+    
+}
