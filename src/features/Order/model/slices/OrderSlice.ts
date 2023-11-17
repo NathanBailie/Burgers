@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { OrderSchema } from '../types/OrderSchema';
+import type { OrderSchema } from '../types/OrderSchema';
 
 const initialState: OrderSchema = {
     order: '',
@@ -11,8 +11,14 @@ export const orderSlice = createSlice({
     name: 'order',
     initialState,
     reducers: {
-        changeName: (state) => {
-
+        changeOrder: (state, action) => {
+            state.order = action.payload;
+        },
+        changeName: (state, action) => {
+            state.name = action.payload;
+        },
+        changePhone: (state, action) => {
+            state.phone = action.payload;
         }
     }
 });

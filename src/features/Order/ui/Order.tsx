@@ -4,13 +4,26 @@ import orderBox from 'shared/assets/images/orderBox.png';
 import cls from './Order.module.scss';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { getName, getOrder, getPhone } from '../model/selectors/orderSelectors';
+import { getName, getOrder, getPhone } from '../model/selectors/getOrderSelectors';
+import { orderActions } from '../model/slices/orderSlice';
 
 export const Order = memo(() => {
     const dispatch = useDispatch();
     const order = useSelector(getOrder);
     const name = useSelector(getName);
     const phone = useSelector(getPhone);
+
+    const onChangeOrder = (e: any) => {
+        dispatch(orderActions.changeOrder(e.target.value));
+    };
+
+    const onChangeName = (e: any) => {
+        dispatch(orderActions.changeName(e.target.value));
+    };
+
+    const onChangePhone = (e: any) => {
+        dispatch(orderActions.changePhone(e.target.value));
+    };
 
     return (
         <div className={classNames(cls.Order, {}, [])}>
@@ -25,16 +38,33 @@ export const Order = memo(() => {
                     <p className={cls.Order__description}>
                         Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа
                     </p>
-                    <input type="text" placeholder='Ваш заказ' className={cls.Order__input} value={order} />
-                    <input type="text" placeholder='Ваше имя' className={cls.Order__input} value={name} />
-                    <input type="text" placeholder='Ваш телефон' className={cls.Order__input} value={phone} />
+                    <input
+                        type="text"
+                        placeholder='Ваш заказ'
+                        className={cls.Order__input}
+                        value={order}
+                        onChange={onChangeOrder}
+                    />
+                    <input
+                        type="text"
+                        placeholder='Ваше имя'
+                        className={cls.Order__input}
+                        value={name}
+                        onChange={onChangeName}
+                    />
+                    <input
+                        type="text"
+                        placeholder='Ваш телефон'
+                        className={cls.Order__input}
+                        value={phone}
+                        onChange={onChangePhone}
+                    />
                     <Button
                         theme={ButtonTheme.YELLOW}
                         width='344'
                         height='62'
                         text='Оформить заказ'
                     />
-
                 </div>
             </div>
         </div>

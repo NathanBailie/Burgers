@@ -52,6 +52,7 @@
         background: none;
         border-radius: 8px;
         border: 1px solid #DA8023;
+        color: var(--text-color);
         
         &::placeholder {
             font: var(--font-m);
