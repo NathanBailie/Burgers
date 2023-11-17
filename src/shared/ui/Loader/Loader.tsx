@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
-import burger from './animations/burger.json';
+import burger from 'shared/assets/animations/burger.json';
 import './Loader.scss';
 
 export const Loader = memo(() => {

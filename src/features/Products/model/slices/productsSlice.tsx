@@ -4,8 +4,7 @@ import type { ProductsSchema } from '../types/ProductsSchema';
 
 const initialState: ProductsSchema = {
     data: [],
-    // status: 'idle',
-    status: 'loading',
+    status: 'idle',
     error: null
 };
 

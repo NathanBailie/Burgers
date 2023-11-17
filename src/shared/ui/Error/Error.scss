@@ -1,0 +1,17 @@
+.Error {
+    color: #ffb3a2;
+    
+    &__text {
+        font: 24px/32px Gilroy, sans-serif;
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    &__image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+}
