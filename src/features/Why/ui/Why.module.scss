@@ -1,7 +1,6 @@
 .Why {
     padding: 0 10px 180px;
-
-    // background: url('../../../shared/assets/images/cheddarBurger.png') center center/cover no-repeat;
+    background: url('../../../shared/assets/images/backgrounds/why.png') center center/cover no-repeat;
     
     &__title {
         font: var(--font-title);
@@ -11,7 +10,7 @@
         text-align: center;
     }
     
-    &__container {
+    &__advantages {
         display: grid;
         gap: 100px;
         grid-template-columns: repeat(auto-fill, 312px);

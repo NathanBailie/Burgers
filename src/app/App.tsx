@@ -6,8 +6,10 @@ import { Products } from 'features/Products';
 const App = () => {
     return (
         <div className="app">
-            <Header />
-            <CheddarBurger />
+            <div className="bgWrapper">
+                <Header />
+                <CheddarBurger />
+            </div>
             <Why />
             <Products />
         </div>

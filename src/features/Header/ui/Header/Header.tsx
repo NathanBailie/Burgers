@@ -22,7 +22,7 @@ export const Header = memo(() => {
     };
 
     return (
-        <div className={classNames(cls.Header, {}, [])}>
+        <header className={classNames(cls.Header, {}, [])}>
             <div className={classNames(cls.Header__container, menuMods, ['container'])}>
                 <div className={cls.Header__logo}>
                     <img src={logo} alt="logo" />
@@ -49,7 +49,7 @@ export const Header = memo(() => {
                 <HeaderCurrency />
             </div>
             <HeaderHamburger />
-        </div>
+        </header>
     );
 });
 
