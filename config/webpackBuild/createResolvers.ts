@@ -1,4 +1,5 @@
 import { type ResolveOptions } from 'webpack';
+import path from 'path';
 
 export function createResolvers(src: string): ResolveOptions {
     return {

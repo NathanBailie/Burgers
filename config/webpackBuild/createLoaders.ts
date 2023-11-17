@@ -13,12 +13,11 @@ export function createLoaders(isDev: boolean): RuleSetRule[] {
     };
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-        use: [
-            {
-                loader: 'file-loader'
-            }
-        ]
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: '[name].[hash][ext]'
+        }
     };
 
     const svgLoader = {

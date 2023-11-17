@@ -16,6 +16,7 @@
                 "./src/*"
             ],
         },
+        "resolveJsonModule": true
     },
     "ts-node": {
         "compilerOptions": {
