@@ -69,6 +69,7 @@ export const Products = memo(() => {
                                             height='62'
                                             text='Заказать'
                                             imageName={ButtonImage.SHOPPING_CARD}
+                                            productName={item.title}
                                         />
                                     </div>
                                 </div>

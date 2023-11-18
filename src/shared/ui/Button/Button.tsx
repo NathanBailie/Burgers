@@ -2,6 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, type ButtonHTMLAttributes } from 'react';
 import ShoppingCard from 'shared/assets/images/shopping-card.png';
 import cls from './Button.module.scss';
+import { orderActions } from 'features/Order/model/slices/orderSlice';
+import { useDispatch } from 'react-redux';
 
 export enum ButtonTheme {
     RED = 'red',
@@ -22,6 +24,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     height?: string
     text: string
     imageName?: ButtonImage
+    postOrder?: boolean
+    productName?: string
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -30,8 +34,26 @@ export const Button = memo((props: ButtonProps) => {
         width = '182',
         height = '62',
         text,
-        imageName
+        imageName,
+        postOrder = false,
+        productName
     } = props;
+
+    const dispatch = useDispatch();
+
+    const updateOrder = (productName: string) => {
+        dispatch(orderActions.changeOrder(productName));
+    };
+
+    const buttonClickHandle = () => {
+        if (productName) {
+            updateOrder(productName)
+        }
+
+        if (postOrder) {
+            dispatch(orderActions.validateForm())
+        }
+    }
 
     return (
         <button
@@ -45,6 +67,7 @@ export const Button = memo((props: ButtonProps) => {
                 width: `${width}px`,
                 height: `${height}px`
             }}
+            onClick={buttonClickHandle}
         >
             <span className={cls.Button__text}>
                 {text}

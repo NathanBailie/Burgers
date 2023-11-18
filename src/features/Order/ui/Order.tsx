@@ -48,6 +48,7 @@ export const Order = memo(() => {
                         width='344'
                         height='62'
                         text='Оформить заказ'
+                        postOrder
                     />
                 </div>
             </div>
