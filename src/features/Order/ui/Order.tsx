@@ -13,7 +13,7 @@ export const Order = memo(() => {
     const phone = useSelector(getPhone);
 
     return (
-        <div className={classNames(cls.Order, {}, [])}>
+        <section className={classNames(cls.Order, {}, [])}>
             <div className={classNames(cls.Order__container, {}, [])}>
                 <h2 className={cls.Order__title}>
                     оформление заказа
@@ -51,7 +51,7 @@ export const Order = memo(() => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 });
 

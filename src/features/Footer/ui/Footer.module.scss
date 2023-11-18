@@ -1,0 +1,27 @@
+.Footer {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    padding: 60px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    
+    img {
+        width: 155px;
+        height: 50px;
+    }
+    
+    p {
+        font: var(--font-m);
+        color: var(--text-color)
+    }
+}
+@media (width<= 600px) {
+
+    .Footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

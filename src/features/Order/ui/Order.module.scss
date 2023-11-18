@@ -47,3 +47,12 @@
         margin-bottom: 40px;
     }   
 }
+@media (width<= 600px) {
+
+    .Order {
+
+        &__form {
+            margin: 60px auto 0;
+        }
+    }
+}
