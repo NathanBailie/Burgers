@@ -1,5 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import type { OrderSchema } from '../types/OrderSchema';
+
+interface ChangeValuePayload {
+    field: keyof OrderSchema
+    value: string
+}
 
 const initialState: OrderSchema = {
     order: '',
@@ -11,14 +16,9 @@ export const orderSlice = createSlice({
     name: 'order',
     initialState,
     reducers: {
-        changeOrder: (state, action) => {
-            state.order = action.payload;
-        },
-        changeName: (state, action) => {
-            state.name = action.payload;
-        },
-        changePhone: (state, action) => {
-            state.phone = action.payload;
+        changeValue: (state, action: PayloadAction<ChangeValuePayload>) => {
+            const { field, value } = action.payload;
+            state[field] = value;
         }
     }
 });

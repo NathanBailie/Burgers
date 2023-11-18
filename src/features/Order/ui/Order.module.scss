@@ -43,21 +43,5 @@
         color: var(--text-color);
         text-align: center;
         margin-bottom: 40px;
-    }
-    
-    &__input {
-        width: 100%;
-        padding: 20px 10px;
-        margin-bottom: 20px;
-        background: none;
-        border-radius: 8px;
-        border: 1px solid #DA8023;
-        color: var(--text-color);
-        
-        &::placeholder {
-            font: var(--font-m);
-            color: #757575;
-        }
-    }
-    
+    }   
 }
