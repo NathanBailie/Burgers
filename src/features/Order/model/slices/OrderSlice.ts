@@ -1,5 +1,6 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
 import type { ChangeValuePayload, OrderSchema, Field } from '../types/OrderSchema';
+import sendOrder from '../services/sendOrder';
 
 const initialState: OrderSchema = {
     order: '',
@@ -31,6 +32,10 @@ export const orderSlice = createSlice({
             fields.forEach((field: Field) => {
                 state[`${field}Error`] = state[field] === '';
             });
+
+            if (!state.orderError && !state.nameError && !state.phoneError) {
+                sendOrder(state.order)
+            }
         }
     }
 });
