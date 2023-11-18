@@ -23,7 +23,7 @@ export const Products = memo(() => {
     }, [dispatch]);
 
     return (
-        <section className={classNames(cls.Products, {}, ['container'])}>
+        <section className={classNames(cls.Products, {}, [])}>
             <h2 className={cls.Products__title}>
                 выберите свой бургер
             </h2>
@@ -39,7 +39,7 @@ export const Products = memo(() => {
                     : null
             }
 
-            <div className={classNames(cls.Products__container, {}, ['container'])}>
+            <div className={classNames(cls.Products__container, {}, [])}>
                 {
                     status === 'succeeded'
                         ? products.map((item, index) => {

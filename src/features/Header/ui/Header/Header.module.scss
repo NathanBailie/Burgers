@@ -1,7 +1,9 @@
 .Header {
-    position: relative;
-    padding: 40px 10px;
+    max-width: var(--section-max-width);
     height: 130px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    position: relative;
     z-index: 100;
     
     &__container {

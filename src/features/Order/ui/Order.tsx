@@ -14,7 +14,7 @@ export const Order = memo(() => {
 
     return (
         <div className={classNames(cls.Order, {}, [])}>
-            <div className={classNames(cls.Order__container, {}, ['container'])}>
+            <div className={classNames(cls.Order__container, {}, [])}>
                 <h2 className={cls.Order__title}>
                     оформление заказа
                 </h2>

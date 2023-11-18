@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo, ChangeEvent } from 'react';
+import { memo, type ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import type { OrderSchema } from 'features/Order';
 import { orderActions } from 'features/Order/model/slices/orderSlice';

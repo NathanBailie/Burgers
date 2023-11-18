@@ -1,4 +1,6 @@
 .Products {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
     padding: 0 0 180px;
     background: url('../../../shared/assets/images/backgrounds/products.png') center center/cover no-repeat;
 

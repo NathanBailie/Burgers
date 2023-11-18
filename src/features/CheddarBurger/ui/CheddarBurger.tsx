@@ -6,7 +6,7 @@ import cls from './CheddarBurger.module.scss';
 
 export const CheddarBurger = memo(() => {
     return (
-        <section className={classNames(cls.CheddarBurger, {}, ['container'])}>
+        <section className={classNames(cls.CheddarBurger, {}, [])}>
             <div className={cls.CheddarBurger__container}>
                 <Button theme={ButtonTheme.RED} width='137' height='46' text='Новое меню' />
                 <h1 className={cls.CheddarBurger__title}>
