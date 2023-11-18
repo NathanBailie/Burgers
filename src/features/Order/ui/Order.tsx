@@ -3,14 +3,26 @@ import { memo } from 'react';
 import orderBox from 'shared/assets/images/orderBox.png';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { getName, getOrder, getPhone } from '../model/selectors/getOrderSelectors';
+import {
+    getName,
+    getNameError,
+    getOrder,
+    getOrderError,
+    getPhone,
+    getPhoneError
+} from '../model/selectors/getOrderSelectors';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './Order.module.scss';
+import { ErrorText } from 'shared/ui/ErrorText/ErrorText';
 
 export const Order = memo(() => {
     const order = useSelector(getOrder);
     const name = useSelector(getName);
     const phone = useSelector(getPhone);
+
+    const orderError = useSelector(getOrderError);
+    const nameError = useSelector(getNameError);
+    const phoneError = useSelector(getPhoneError);
 
     return (
         <section className={classNames(cls.Order, {}, [])}>
@@ -25,24 +37,30 @@ export const Order = memo(() => {
                     <p className={cls.Order__description}>
                         Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа
                     </p>
+                    <ErrorText error={orderError} />
                     <Input
                         inputType="order"
                         placeholder='Ваш заказ'
                         inputValue={order}
                         stateField='order'
                     />
+
+                    <ErrorText error={nameError} />
                     <Input
                         inputType="name"
                         placeholder='Ваше имя'
                         inputValue={name}
                         stateField='name'
                     />
+
+                    <ErrorText error={phoneError} />
                     <Input
                         inputType="number"
                         placeholder='Ваш телефон'
                         inputValue={phone}
                         stateField='phone'
                     />
+
                     <Button
                         theme={ButtonTheme.YELLOW}
                         width='344'

@@ -1,5 +1,5 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
-import type { ChangeValuePayload, OrderSchema } from '../types/OrderSchema';
+import type { ChangeValuePayload, OrderSchema, Field } from '../types/OrderSchema';
 
 const initialState: OrderSchema = {
     order: '',
@@ -26,17 +26,11 @@ export const orderSlice = createSlice({
             }
         },
         validateForm: (state) => {
-            if (state.order === '') {
-                state.orderError = true;
-            }
+            const fields: Field[] = ['order', 'name', 'phone'];
 
-            if (state.name === '') {
-                state.nameError = true;
-            }
-
-            if (state.phone === '') {
-                state.phoneError = true;
-            }
+            fields.forEach((field: Field) => {
+                state[`${field}Error`] = state[field] === '';
+            });
         }
     }
 });
