@@ -2,8 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import ChadderBurger from 'shared/assets/images/cheddarBurger.png';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import cls from './CheddarBurger.module.scss';
 import useStyle from 'shared/lib/hooks/useStyle';
+import cls from './CheddarBurger.module.scss';
 
 export const CheddarBurger = memo(() => {
     const { style, setNewStyle } = useStyle();

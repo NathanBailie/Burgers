@@ -23,7 +23,7 @@ export const Products = memo(() => {
     }, [dispatch]);
 
     return (
-        <section className={classNames(cls.Products, {}, [])}>
+        <section className={classNames(cls.Products, {}, [])} id="products-section">
             <h2 className={cls.Products__title}>
                 выберите свой бургер
             </h2>

@@ -30,17 +30,17 @@ export const Header = memo(() => {
                 <nav className={cls.menu}>
                     <ul className={cls.menu__list}>
                         <li className={cls.menu__item}>
-                            <a onClick={deactivateHamburger}>
+                            <a href="/#why-section" onClick={deactivateHamburger}>
                                 Почему у нас
                             </a>
                         </li>
                         <li className={cls.menu__item}>
-                            <a onClick={deactivateHamburger}>
+                            <a href="/#products-section" onClick={deactivateHamburger}>
                                 Меню бургеров
                             </a>
                         </li>
                         <li className={cls.menu__item}>
-                            <a onClick={deactivateHamburger}>
+                            <a href="/#order-section" onClick={deactivateHamburger}>
                                 Оформление заказа
                             </a>
                         </li>

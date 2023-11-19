@@ -5,7 +5,7 @@ import cls from './Why.module.scss';
 
 export const Why = memo(() => {
     return (
-        <div className={classNames(cls.Why, {}, [])}>
+        <div className={classNames(cls.Why, {}, [])} id="why-section">
             <h2 className={cls.Why__title}>
                 почему нас выбирают?
             </h2>

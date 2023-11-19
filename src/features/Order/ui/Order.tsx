@@ -29,7 +29,7 @@ export const Order = memo(() => {
     const { style, setNewStyle } = useStyle();
 
     return (
-        <section className={classNames(cls.Order, {}, [])}>
+        <section className={classNames(cls.Order, {}, [])} id="order-section">
             <div className={classNames(cls.Order__container, {}, [])}>
                 <h2 className={cls.Order__title}>
                     оформление заказа

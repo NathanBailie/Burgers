@@ -2,6 +2,10 @@
 @import '../variables/global';
 @import '../fonts/fonts';
 
+html {
+    scroll-behavior: smooth;
+}
+
 .app {
     font-family: Gilroy, sans-serif;
     background: #191411;
