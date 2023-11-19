@@ -27,7 +27,7 @@ export const Chevron = memo(() => {
 
     return (
         <div className={classNames(cls.Chevron, mods, [])}>
-            <a href="/#header">
+            <a onClick={() => { window.scrollTo({ top: 0 }) }}>
                 <img src={icon} alt="chevron" />
             </a>
         </div>
