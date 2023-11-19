@@ -7,6 +7,7 @@
     opacity: 0;
     z-index: -1;
     pointer-events: none;
+    background: rgb(0 0 0 / 60%);
     
     &__window {
         position: absolute;
@@ -15,19 +16,38 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 40px;
-        background: #211A16;
+        background: #321e13;
         border-radius: 16px;
         border: 1px solid #353535;
         transform: scale(0.5);
         transition: 0.3s transform;
         
-        
         span {
             font: var(--font-xxl);
             color: var(--text-color);
+            text-align: center;
+            margin-top: 140px;
+        }
+        
+        button {
+            position: absolute;
+            bottom: 55px;
+            padding: 7px 20px;
+            border-radius: 8px;
+            background: orange;
+            cursor: pointer;
+            user-select: none;
+            font: var(--font-l);
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &:active {
+                transform: scale(1);
+                opacity: 0.8;
+            }
         }
     }
 }

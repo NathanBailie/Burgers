@@ -55,7 +55,7 @@ export const orderSlice = createSlice({
             })
             .addCase(fetchOrders.rejected, (state, action) => {
                 state.modalIsOpen = true;
-                state.modalText = 'Ошибка при отправке данных, пожалуйста повторите Ваш заказ';
+                state.modalText = 'Ошибка при отправке данных, пожалуйста повторите заказ';
             });
     }
 
