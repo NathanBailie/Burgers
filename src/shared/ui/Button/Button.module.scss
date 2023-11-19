@@ -21,6 +21,12 @@
     
     &__text {
         font: var(--font-l);
+        color: black;
+
+        a {
+            text-decoration: none; 
+            color: black;
+        }
     }
     
     &__image {

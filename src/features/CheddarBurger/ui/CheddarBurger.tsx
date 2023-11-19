@@ -11,7 +11,13 @@ export const CheddarBurger = memo(() => {
     return (
         <section className={classNames(cls.CheddarBurger, {}, [])}>
             <div className={cls.CheddarBurger__container}>
-                <Button theme={ButtonTheme.RED} width='137' height='46' text='Новое меню' />
+                <Button
+                    theme={ButtonTheme.RED}
+                    width='137'
+                    height='46'
+                    text='Новое меню'
+                    sectionLink="/#why-section"
+                />
                 <h1 className={cls.CheddarBurger__title}>
                     бургер чеддер
                 </h1>
@@ -20,7 +26,13 @@ export const CheddarBurger = memo(() => {
                     и насладиться отличным вкусом наших бургеров. Готовим для
                     вас лучшие бургеры в городе из отборной мраморной говядины.
                 </p>
-                <Button theme={ButtonTheme.YELLOW} width='260' height='62' text='Смотреть меню' />
+                <Button
+                    theme={ButtonTheme.YELLOW}
+                    width='260'
+                    height='62'
+                    text='Смотреть меню'
+                    sectionLink="/#why-section"
+                />
             </div>
             <div className={cls.CheddarBurger__image}>
                 <img src={ChadderBurger} alt="ChadderBurger" style={style} onMouseMove={setNewStyle} />
