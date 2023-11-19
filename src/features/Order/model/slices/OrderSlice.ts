@@ -22,7 +22,7 @@ export const orderSlice = createSlice({
             state[field] = value;
         },
         changeOrder: (state, action) => {
-            const reg = new RegExp(action.payload);
+            const reg = new RegExp(`${action.payload} - \\d+шт;`);
 
             if (!reg.test(state.order)) {
                 state.order = `${action.payload} - 1шт; ${state.order}`;
