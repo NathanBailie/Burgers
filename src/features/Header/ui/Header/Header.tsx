@@ -22,7 +22,7 @@ export const Header = memo(() => {
     };
 
     return (
-        <header className={classNames(cls.Header, {}, [])}>
+        <header className={classNames(cls.Header, {}, [])} id="header">
             <div className={classNames(cls.Header__container, menuMods, [])}>
                 <div className={cls.Header__logo}>
                     <img src={logo} alt="logo" />
