@@ -15,6 +15,7 @@ import { Input } from 'shared/ui/Input/Input';
 import cls from './Order.module.scss';
 import { ErrorText } from 'shared/ui/ErrorText/ErrorText';
 import { Modal } from 'shared/ui/Modal/Modal';
+import useStyle from 'shared/lib/hooks/useStyle';
 
 export const Order = memo(() => {
     const order = useSelector(getOrder);
@@ -25,6 +26,8 @@ export const Order = memo(() => {
     const nameError = useSelector(getNameError);
     const phoneError = useSelector(getPhoneError);
 
+    const { style, setNewStyle } = useStyle();
+
     return (
         <section className={classNames(cls.Order, {}, [])}>
             <div className={classNames(cls.Order__container, {}, [])}>
@@ -32,7 +35,7 @@ export const Order = memo(() => {
                     оформление заказа
                 </h2>
                 <div className={cls.Order__image}>
-                    <img src={orderBox} alt="orderBox" />
+                    <img src={orderBox} alt="orderBox" style={style} onMouseMove={setNewStyle} />
                 </div>
                 <div className={cls.Order__form}>
                     <p className={cls.Order__description}>

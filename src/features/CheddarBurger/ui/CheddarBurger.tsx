@@ -3,8 +3,11 @@ import { memo } from 'react';
 import ChadderBurger from 'shared/assets/images/cheddarBurger.png';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './CheddarBurger.module.scss';
+import useStyle from 'shared/lib/hooks/useStyle';
 
 export const CheddarBurger = memo(() => {
+    const { style, setNewStyle } = useStyle();
+
     return (
         <section className={classNames(cls.CheddarBurger, {}, [])}>
             <div className={cls.CheddarBurger__container}>
@@ -20,7 +23,7 @@ export const CheddarBurger = memo(() => {
                 <Button theme={ButtonTheme.YELLOW} width='260' height='62' text='Смотреть меню' />
             </div>
             <div className={cls.CheddarBurger__image}>
-                <img src={ChadderBurger} alt="ChadderBurger" />
+                <img src={ChadderBurger} alt="ChadderBurger" style={style} onMouseMove={setNewStyle} />
             </div>
         </section>
     );
