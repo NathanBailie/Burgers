@@ -7,3 +7,6 @@ export const getPhone = (state: StateSchema) => state.order.phone;
 export const getOrderError = (state: StateSchema) => state.order.orderError;
 export const getNameError = (state: StateSchema) => state.order.nameError;
 export const getPhoneError = (state: StateSchema) => state.order.phoneError;
+
+export const getModalContiion = (state: StateSchema) => state.order.modalIsOpen;
+export const getModalText = (state: StateSchema) => state.order.modalText;

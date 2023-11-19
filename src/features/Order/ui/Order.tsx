@@ -14,6 +14,7 @@ import {
 import { Input } from 'shared/ui/Input/Input';
 import cls from './Order.module.scss';
 import { ErrorText } from 'shared/ui/ErrorText/ErrorText';
+import { Modal } from 'shared/ui/Modal/Modal';
 
 export const Order = memo(() => {
     const order = useSelector(getOrder);
@@ -70,6 +71,7 @@ export const Order = memo(() => {
                     />
                 </div>
             </div>
+            <Modal />
         </section>
     );
 });

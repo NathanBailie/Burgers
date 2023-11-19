@@ -5,6 +5,8 @@ export interface OrderSchema {
     orderError: boolean
     nameError: boolean
     phoneError: boolean
+    modalIsOpen: boolean
+    modalText: string
 }
 
 export type Field = 'order' | 'name' | 'phone';

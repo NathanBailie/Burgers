@@ -4,6 +4,8 @@ import ShoppingCard from 'shared/assets/images/shopping-card.png';
 import cls from './Button.module.scss';
 import { orderActions } from 'features/Order/model/slices/orderSlice';
 import { useDispatch } from 'react-redux';
+import type { AppDispatch } from 'app/providers/StoreProvider/config/store';
+import useValidate from 'features/Order/model/hooks/useValidate';
 
 export enum ButtonTheme {
     RED = 'red',
@@ -39,7 +41,8 @@ export const Button = memo((props: ButtonProps) => {
         productName
     } = props;
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
+    const { validateFields } = useValidate();
 
     const updateOrder = (productName: string) => {
         dispatch(orderActions.changeOrder(productName));
@@ -47,11 +50,11 @@ export const Button = memo((props: ButtonProps) => {
 
     const buttonClickHandle = () => {
         if (productName) {
-            updateOrder(productName)
+            updateOrder(productName);
         }
 
         if (postOrder) {
-            dispatch(orderActions.validateForm())
+            validateFields()
         }
     }
 
