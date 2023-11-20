@@ -6,10 +6,10 @@ The layout of this site I took from a programming intensive held by the [Itlogia
 <!-- ### Here you can try this project on the website - [Link](https://nathanbailie.github.io/Burgers/ "Click to visit") -->
 
 ## Screenshots
-<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/desctop.png" width="900" />
-<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/desctop2.png" width="900" />
-<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/mobile.png" width="400" />
-<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/mobile2.png" width="400" />
+<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/desctop.PNG" width="900" />
+<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/desctop2.PNG" width="900" />
+<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/mobile.PNG" width="400" />
+<img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/mobile2.PNG" width="400" />
 
 ## Technologies
 * I made this site on a build is manually assembled by me. All dependencies are manually configured
