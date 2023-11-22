@@ -16,7 +16,7 @@ export const CheddarBurger = memo(() => {
                     width='137'
                     height='46'
                     text='Новое меню'
-                    sectionLink="/#why-section"
+                    sectionLink="/#products-section"
                     textColor={ButtonTextColor.WHITE}
                 />
                 <h1 className={cls.CheddarBurger__title}>
@@ -32,7 +32,7 @@ export const CheddarBurger = memo(() => {
                     width='260'
                     height='62'
                     text='Смотреть меню'
-                    sectionLink="/#why-section"
+                    sectionLink="/#products-section"
                 />
             </div>
             <div className={cls.CheddarBurger__image}>
