@@ -3,7 +3,7 @@
 ## Description
 The layout of this site I took from a programming intensive held by the [Itlogia](https://itlogia.ru/) school. This is a colorful burger-themed landing page.
 
-<!-- ### Here you can try this project on the website - [Link](https://nathanbailie.github.io/Burgers/ "Click to visit") -->
+### Here you can try this project on the website - [Link](https://burgers.frontwebdev.ru/ "Click to visit")
 
 ## Screenshots
 <img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/desctop.PNG" width="900" />
