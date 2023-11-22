@@ -2,6 +2,8 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import path from 'path';
 
 export function createPlugins(
     html: string,
@@ -19,8 +21,15 @@ export function createPlugins(
         }),
         new webpack.DefinePlugin({
             IS_DEV: JSON.stringify(isDev)
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve('./public/favicon.png'),
+                    to: path.resolve('build/icons')
+                }
+            ]
         })
-
     ];
 
     if (isDev) {

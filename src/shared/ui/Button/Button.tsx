@@ -12,6 +12,11 @@ export enum ButtonTheme {
     YELLOW = 'yellow',
 }
 
+export enum ButtonTextColor {
+    WHITE = 'white',
+    BLACK = 'black',
+}
+
 export enum ButtonImage {
     SHOPPING_CARD = 'shoppingCard',
 }
@@ -29,6 +34,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     postOrder?: boolean
     productName?: string
     sectionLink?: string
+    textColor?: string
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -40,7 +46,8 @@ export const Button = memo((props: ButtonProps) => {
         imageName,
         postOrder = false,
         productName,
-        sectionLink
+        sectionLink,
+        textColor = ButtonTextColor.BLACK
     } = props;
 
     const dispatch = useDispatch<AppDispatch>();
@@ -74,10 +81,18 @@ export const Button = memo((props: ButtonProps) => {
             }}
             onClick={buttonClickHandle}
         >
-            <span className={cls.Button__text}>
+            <span
+                className={cls.Button__text}>
                 {
                     sectionLink
-                        ? <a href={sectionLink}>{text}</a>
+                        ? <a
+                            href={sectionLink}
+                            style={{
+                                color: `${textColor}`
+                            }}
+                        >
+                            {text}
+                        </a>
                         : text
                 }
 

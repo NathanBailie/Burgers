@@ -12,11 +12,19 @@ export function createLoaders(isDev: boolean): RuleSetRule[] {
         exclude: /node_modules/
     };
 
-    const fileLoader = {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    const imageLoader = {
+        test: /\.(png|svg|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-            filename: '[name].[hash][ext]'
+            filename: 'img/[name].[hash][ext]'
+        }
+    };
+
+    const fontLoader = {
+        test: /\.(woff2|woff|ttf)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'fonts/font/[name].[hash][ext]'
         }
     };
 
@@ -27,7 +35,8 @@ export function createLoaders(isDev: boolean): RuleSetRule[] {
     };
 
     return [
-        fileLoader,
+        imageLoader,
+        fontLoader,
         svgLoader,
         babelLoader,
         typeScriptLoader,

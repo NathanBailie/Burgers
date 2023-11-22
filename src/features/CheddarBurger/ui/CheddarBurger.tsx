@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import ChadderBurger from 'shared/assets/images/cheddarBurger.png';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonTextColor, ButtonTheme } from 'shared/ui/Button/Button';
 import useStyle from 'shared/lib/hooks/useStyle';
 import cls from './CheddarBurger.module.scss';
 
@@ -17,6 +17,7 @@ export const CheddarBurger = memo(() => {
                     height='46'
                     text='Новое меню'
                     sectionLink="/#why-section"
+                    textColor={ButtonTextColor.WHITE}
                 />
                 <h1 className={cls.CheddarBurger__title}>
                     бургер чеддер
