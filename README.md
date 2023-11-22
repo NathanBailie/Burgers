@@ -21,4 +21,4 @@ The layout of this site I took from a programming intensive held by the [Itlogia
 * Husky (pre-commit)
 * Methodologies (Feature-Sliced Design, BEM)
 * Custom component library (Portal, Modal, Button, Chevron, Input, Loader, ErrorText, Error)
-* Additional (Responsive Web Design, working with Figma, lottie-player, classNames, сustom js-animation of modal-window, axios)
+* Additional (Responsive Web Design, working with Figma, lottie-player, classNames, сustom js-animation of modal-window, axios, custom hamburger menu)
