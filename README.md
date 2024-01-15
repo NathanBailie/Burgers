@@ -12,10 +12,10 @@ The layout of this site I took from a programming intensive held by the [Itlogia
 <img src="https://github.com/NathanBailie/Burgers/raw/main/screenshots/mobile2.PNG" width="400" />
 
 ## Technologies
-* I made this site on a build is manually assembled by me. All dependencies are manually configured
-* React 18, rect-redux, reduxjs/toolkit, createAsyncThunk, hooks (memo, useEffect, useState, useCallback), custom hooks (useValidate, useStyle), portal
+* My own build. All dependencies are manually configured
+* React 18, react-redux, reduxjs/toolkit, createAsyncThunk, hooks (memo, useEffect, useState, useCallback), custom hooks (useValidate, useStyle), portal
 * TypeScript (types, interfaces, enums), JavaScript
-* SCSS (flex, grid, animations), css modules
+* SCSS (flex, grid, animations), css variables, css modules
 * Webpack (manually configured with decomposition, env variables)
 * Linters (ESLint, Stylelint)
 * Husky (pre-commit)
